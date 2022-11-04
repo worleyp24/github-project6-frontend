@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.img-homepage {
+  object-fit: contain;
+}
+
+
+<<<<<<< Updated upstream
+
+
+=======
+>>>>>>> Stashed changes
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.281);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
