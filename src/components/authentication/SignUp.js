@@ -85,7 +85,7 @@ const SignUp = () => {
     try {
       const config = { headers: { "Content-type": "application/json" } };
       const { data } = await axios.post(
-        "/api/user",
+        "https://app-fam-backend.herokuapp.com/api/user",
         { username, email, password, image },
         config
       );

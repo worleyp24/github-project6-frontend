@@ -53,13 +53,13 @@ const LogIn = () => {
       const config = { headers: { "Content-type": "application/json" } };
 
       const { data } = await axios.post(
-        "/api/user/login",
+        "https://app-fam-backend.herokuapp.com/api/user/login",
         { email, password },
         config
       );
 
       await axios.put(
-        "/api/user/update",
+        "https://app-fam-backend.herokuapp.com/api/user/update",
         { isActive: true, userId: data._id },
         config
       );
