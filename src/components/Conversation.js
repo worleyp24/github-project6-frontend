@@ -50,10 +50,7 @@ const Conversation = ({ fetchAgain }) => {
         },
       };
 
-      const { data } = await axios.get(
-        "https://app-fam-backend.herokuapp.com/api/chat",
-        config
-      );
+      const { data } = await axios.get("/api/chat", config);
       setConversations(data);
     } catch (error) {}
   };
@@ -81,10 +78,7 @@ const Conversation = ({ fetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(
-        `https://app-fam-backend.herokuapp.com/api/user?search=${search}`,
-        config
-      );
+      const { data } = await axios.get(`/api/user?search=${search}`, config);
 
       setLoading(false);
       setSearchResult(data);
@@ -103,11 +97,7 @@ const Conversation = ({ fetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.post(
-        `https://app-fam-backend.herokuapp.com/api/chat`,
-        { userId },
-        config
-      );
+      const { data } = await axios.post(`/api/chat`, { userId }, config);
 
       if (!conversations.find((c) => c._id === data._id))
         setConversations([data, ...conversations]);

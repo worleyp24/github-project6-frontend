@@ -58,7 +58,7 @@ const ChatBox = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `https://app-fam-backend.herokuapp.com/api/message/${selectedConverstation._id}`,
+        `/api/message/${selectedConverstation._id}`,
         config
       );
 
@@ -85,7 +85,7 @@ const ChatBox = ({ fetchAgain, setFetchAgain }) => {
       setNewMessage("");
       setImage();
       const { data } = await axios.post(
-        "https://app-fam-backend.herokuapp.com/api/message",
+        "/api/message",
         {
           messageBody: image ? image : newMessage,
           messageType: image ? "image" : "text",

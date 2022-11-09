@@ -42,7 +42,7 @@ const NavBar = () => {
       const config = { headers: { "Content-type": "application/json" } };
 
       const { data } = await axios.put(
-        "https://app-fam-backend.herokuapp.com/api/user/update",
+        "/api/user/update",
         { isActive: false, userId: user._id },
         config
       );
