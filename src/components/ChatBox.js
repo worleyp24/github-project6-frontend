@@ -20,7 +20,7 @@ import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import ConversationMessages from "./miscellaneous/ConversationMessages";
 
 import io from "socket.io-client";
-const ENDPOINT = "http://localhost:8080";
+const ENDPOINT = "https://app-fam-backend.herokuapp.com";
 let socket, selectedChatCompare;
 
 const ChatBox = ({ fetchAgain, setFetchAgain }) => {
